@@ -65,18 +65,21 @@ def scrape_rds(c):
     rds_scrape(rds_file)
 
 
+@task
 def scrape_cache(c):
     """Scrape Cache instance data from AWS and save to local file"""
     cache_file = "www/cache/instances.json"
     cache_scrape(cache_file)
 
 
+@task
 def scrape_redshift(c):
     """Scrape Redshift instance data from AWS and save to local file"""
     redshift_file = "www/redshift/instances.json"
     redshift_scrape(redshift_file)
 
 
+@task
 def scrape_opensearch(c):
     """Scrape OpenSearch instance data from AWS and save to local file"""
     opensearch_file = "www/opensearch/instances.json"
